@@ -28,7 +28,6 @@ const displaySuggestions = (suggestions) => {
     const suggestionsContainer = document.getElementById('suggestions');
     suggestionsContainer.innerHTML = '';
 
-    // Use a Set to filter out duplicate titles
     const uniqueTitles = new Set();
     suggestions.forEach(suggestion => {
         if (!uniqueTitles.has(suggestion.title)) {
@@ -39,7 +38,7 @@ const displaySuggestions = (suggestions) => {
             suggestionElement.onclick = () => {
                 document.getElementById('search-input').value = suggestion.title;
                 suggestionsContainer.innerHTML = '';
-                // Automatically trigger search
+                
                 document.getElementById('search-button').click();
             };
             suggestionsContainer.appendChild(suggestionElement);
