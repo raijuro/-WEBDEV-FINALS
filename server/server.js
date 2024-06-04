@@ -14,10 +14,8 @@ wss.on('connection', (ws) => {
         const query = message.toString();
         console.log(`Received search query: ${query}`);
 
-        // Fetch search suggestions from TMDb API
         const suggestions = await fetchSearchSuggestions(query);
 
-        // Send suggestions back to the client
         ws.send(JSON.stringify(suggestions));
     });
 
@@ -29,7 +27,7 @@ wss.on('connection', (ws) => {
 console.log('WebSocket server is running on ws://localhost:8080');
 
 async function fetchSearchSuggestions(query) {
-    const apiKey = '4fc23459f91f0511543f8721c6be3214'; // Replace with your TMDb API key
+    const apiKey = '4fc23459f91f0511543f8721c6be3214'; 
     const url = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${query}`;
     try {
         const response = await fetch(url);
