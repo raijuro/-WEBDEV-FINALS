@@ -10,14 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const loadingIndicator = document.getElementById('loading-indicator');
     const homeButton = document.getElementById('home-button');
 
-    // Initialize WebSocket connection
     setupWebSocket();
 
-    // Initially hide the details container
     movieDetailsContainer.classList.add('hidden');
     newsArticlesContainer.classList.add('hidden');
 
-    // Event listener for the search input
     searchInput.addEventListener('input', () => {
         const query = searchInput.value;
         if (query) {
@@ -27,32 +24,26 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Event listener for the search button
     searchButton.addEventListener('click', () => {
         const query = searchInput.value;
         if (query) {
-            // Clear previous search results, movie details, and suggestions
+          
             searchResults.innerHTML = '';
             movieDetailsContainer.innerHTML = '';
             newsArticlesContainer.innerHTML = '';
             document.getElementById('suggestions').innerHTML = '';
 
-            // Hide the details container initially
             movieDetailsContainer.classList.add('hidden');
             newsArticlesContainer.classList.add('hidden');
 
-            // Show loading indicator
             loadingIndicator.style.display = 'block';
-
-            // Fetch new search results
+            
             fetchMovies(query).then(displayResults).finally(() => {
-                // Hide loading indicator
                 loadingIndicator.style.display = 'none';
             });
         }
     });
 
-    // Display search results
     const displayResults = (movies) => {
         searchResults.innerHTML = '';
         if (movies.length === 0) {
@@ -73,28 +64,26 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    // Show movie details
     window.showDetails = async (movieId, title) => {
-        // Show loading indicator
+    
         loadingIndicator.style.display = 'block';
 
         const movieDetailsData = await fetchMovieDetails(movieId);
         const movieCast = await fetchMovieCast(movieId);
         const newsArticles = await fetchNewsArticles(title);
         
-        // Hide loading indicator
+    
         loadingIndicator.style.display = 'none';
 
         if (movieDetailsData) {
             displayMovieDetails(movieDetailsData, movieCast, newsArticles);
             scrollToDetails();
-            // Show the details container
+            
             movieDetailsContainer.classList.remove('hidden');
             newsArticlesContainer.classList.remove('hidden');
         }
     };
 
-    // Display movie details
     const displayMovieDetails = (movie, cast, newsArticles) => {
         const castList = cast.map(actor => `<li>${actor.name} as ${actor.character}</li>`).join('');
         const newsList = newsArticles.length > 0 ? newsArticles.map(article => `
@@ -128,30 +117,27 @@ document.addEventListener('DOMContentLoaded', () => {
             ${newsList}
         `;
 
-        // Add smooth scrolling for "View Articles" button
+       
         document.getElementById('view-articles').addEventListener('click', (event) => {
             event.preventDefault();
             document.querySelector('#news-articles').scrollIntoView({ behavior: 'smooth' });
         });
     };
 
-    // Scroll to the movie details section
     const scrollToDetails = () => {
         movieDetailsContainer.scrollIntoView({ behavior: 'smooth' });
     };
 
-    // Event listener for the home button
+  
     homeButton.addEventListener('click', () => {
-        // Clear the search input
+      
         searchInput.value = '';
         
-        // Clear previous search results, movie details, and suggestions
         searchResults.innerHTML = '';
         movieDetailsContainer.innerHTML = '';
         newsArticlesContainer.innerHTML = '';
         document.getElementById('suggestions').innerHTML = '';
 
-        // Hide the details and articles containers initially
         movieDetailsContainer.classList.add('hidden');
         newsArticlesContainer.classList.add('hidden');
     });
