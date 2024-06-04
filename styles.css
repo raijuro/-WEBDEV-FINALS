@@ -3,13 +3,13 @@
 body {
     font-family: 'Poppins', Arial, sans-serif;
     text-align: center;
-    background-color: #121212; /* Dark background */
-    color: #fff; /* Light text color */
+    background-color: #121212; 
+    color: #fff; 
 }
 
 header {
     margin-bottom: 20px;
-    position: relative; /* Make header a positioned ancestor */
+    position: relative; 
 }
 
 #search-input {
@@ -33,9 +33,9 @@ header {
 }
 
 .suggestions-container {
-    position: absolute; /* Position relative to the nearest positioned ancestor */
-    top: 100%; /* Position it just below the input field */
-    left: 0; /* Align with the left edge of the input field */
+    position: absolute; 
+    top: 100%; 
+    left: 0; 
     width: 300px;
     background-color: white;
     color: black;
@@ -67,7 +67,7 @@ header {
     padding: 10px;
     margin: 10px;
     width: 200px;
-    background-color: #1e1e1e; /* Darker background for movie items */
+    background-color: #1e1e1e; 
     font-family: 'Poppins', Arial, sans-serif;
 }
 
@@ -77,14 +77,14 @@ header {
     align-items: center;
     margin-top: 20px;
     padding: 20px;
-    border: 1px solid #444; /* Add a border to separate sections */
+    border: 1px solid #444;
     background-color: #1e1e1e;
 }
 
 #movie-details {
-    padding-left: 20px; /* Add padding to the left */
+    padding-left: 20px; 
     font-family: 'Poppins', Arial, sans-serif;
-    text-align: left; /* Align text to the left */
+    text-align: left; 
 }
 
 #movie-poster {
@@ -98,7 +98,7 @@ ul {
 }
 
 li {
-    text-align: left; /* Align text to the left */
+    text-align: left; 
     margin: 5px 0;
     font-family: 'Poppins', Arial, sans-serif;
 }
@@ -167,20 +167,19 @@ li {
 
 #watch-trailer, #view-articles, .details-button  {
     padding: 10px 20px;
-    background-color: #6200ee; /* Same color as search button */
+    background-color: #6200ee;
     color: white;
     border: none;
     cursor: pointer;
     font-family: 'Poppins', Arial, sans-serif;
-    margin: 5px; /* Optional: Adds some space between buttons */
+    margin: 5px; 
     border-radius: 50px;
 }
 
 #watch-trailer:hover, #view-articles:hover, .details-button:hover {
-    background-color: #3700b3; /* Same hover color as search button */
+    background-color: #3700b3; 
 }
 
-/* Media Queries for Responsive Design */
 
 @media (min-width: 600px) {
     #movie-details-container {
@@ -253,10 +252,10 @@ li {
     }
     
     .suggestions-container {
-        width: 195px; /* Adjust width for smaller screens */
+        width: 195px; 
     }
 
     .suggestion {
-        padding: 10px; /* Adjust padding for smaller screens */
+        padding: 10px; 
     }
 }
