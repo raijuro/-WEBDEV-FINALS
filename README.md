@@ -24,6 +24,8 @@ Welcome to our Movie/TV Show Explorer, a dynamic single-page web application des
 
 
 
+
+
 **-----How to Set It Up-----**
 
 **Online Setup:**
