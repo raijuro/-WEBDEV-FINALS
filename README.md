@@ -14,14 +14,6 @@ Welcome to our Movie/TV Show Explorer, a dynamic single-page web application des
 - **API Integration:** Utilizes TMDb API to retrieve detailed information about movies and News API to fetch and display news articles and updates.
 - **WebSocket Implementation:** Uses WebSockets to enable real-time search suggestions, providing users with instant feedback as they type their search queries.
 
-## Project Structure
-
-The project consists of the following key files and directories:
-- **index.html:** Contains the HTML structure of the web application.
-- **styles.css:** Includes the CSS styles for the web application.
-- **script.js:** Contains the client-side JavaScript code.
-- **server.js:** Contains the server-side code using Express.js and WebSocket.
-- **README.md:** Provides information about the project.
 
 ## Getting Started
 
