@@ -1,33 +1,59 @@
+Movie/TV Show Explorer
+Welcome to our Movie/TV Show Explorer, a dynamic single-page web application designed to help you explore movies and TV series with ease. This project utilizes a free API to provide comprehensive details about your favorite movies and TV shows.
+
+Features:
+
+Dynamic Single-Page Website: The application updates content dynamically without full page reloads, providing a fast user experience.
+Detailed Information: View descriptions, synopses or plots, ratings, release dates, and casts of movies and TV series.
+Watch Trailers: A dedicated button that redirects you to YouTube to watch trailers about the selected movie or TV shows.
+View Articles: Another button that provides access to related articles about the selected movie or TV show.
+Live Search Recommendations: Real-time data manipulation through web sockets delivers instant suggestions as you type in the search bar.
+Loading Animations: User-friendly loading animations appear during data transmission delays, ensuring a smooth user experience.
+Responsive Design: The user interface is designed to be fully responsive, providing an optimal viewing experience on any device, whether it's a desktop, tablet, or smartphone.
+API Integration: Utilizes TMDb API to retrieve detailed information about movies and News API to fetch and display news articles and updates.
+WebSocket Implementation: Uses WebSockets to enable real-time search suggestions, providing users with instant feedback as they type their search queries.
 
 
---------For online set up:-------
 
-go to this link --> https://raijuro.github.io/-WEBDEV-FINALS/
+-----How to Set It Up-----
 
-Source Code: https://github.com/raijuro/-WEBDEV-FINALS/
+Online Setup:
+
+Visit the live site:
+Go to this link --> https://raijuro.github.io/-WEBDEV-FINALS/
+
+Source Code:
+You can view the source code at 
+https://github.com/raijuro/-WEBDEV-FINALS/
+
+Note:
+
+The API for the articles (News API) CORS is not available for online deployment as it requires a credit card to utilize.
+The WebSocket feature needs a hosting application such as Heroku, Vercel, or Netlify, which also requires a credit card for the free trial.
 
 
-NOTE:
-The API for the articles(News Api) CORS is not available for online deployment, it needs credit card number to utilize. 
-The WebSocket needs hosting application such as Heroku, Vercel, and Netlify, they also requires credit card for free trial
+Local Setup:
 
+1. Download and extract the ZIP file from the repository.
 
-------To set it up locally:------
+2. Open the folder in VS Code:
 
-1.)Download and extract the ZIP file from the repository
+Navigate to the folder -WEBDEV-FINALS-MAIN.
 
-2.)Open the folder in VS Code "-WEBDEV-FINALS-MAIN"
+3. Run a new terminal and execute:
 
-3.)Run a new terminal and run:
+cd ..
+python -m http.server 8000
 
-"cd ..
-python -m http.server 8000"
+4. Run another new terminal, navigate to the server folder and execute:
 
-4.)Run another new terminal to the "server" folder and run:
-"node server.js"
+node server.js
 
-5.) Go to your browser and paste this link:
+5. Open your browser and paste the following link:
 
 http://localhost:8000/-WEBDEV-FINALS-main/
 
-6.) The two API will work, together with the WebSocket; Search a movie/tv series, eg. "Kung Fu Panda"
+6. Test the application:
+
+Both APIs will work together with the WebSocket.
+Try searching for a movie/TV series, e.g., "Kung Fu Panda".
