@@ -5,13 +5,21 @@ Welcome to our Movie/TV Show Explorer, a dynamic single-page web application des
 **Features:**
 
 **Dynamic Single-Page Website**: The application updates content dynamically without full page reloads, providing a fast user experience.
+
 **Detailed Information**: View descriptions, synopses or plots, ratings, release dates, and casts of movies and TV series.
+
 **Watch Trailers**: A dedicated button that redirects you to YouTube to watch trailers about the selected movie or TV shows.
+
 **View Articles**: Another button that provides access to related articles about the selected movie or TV show.
+
 **Live Search Recommendations**: Real-time data manipulation through web sockets delivers instant suggestions as you type in the search bar.
+
 **Loading Animations**: User-friendly loading animations appear during data transmission delays, ensuring a smooth user experience.
+
 **Responsive Design**: The user interface is designed to be fully responsive, providing an optimal viewing experience on any device, whether it's a desktop, tablet, or smartphone.
+
 **API Integration**: Utilizes TMDb API to retrieve detailed information about movies and News API to fetch and display news articles and updates.
+
 **WebSocket Implementation**: Uses WebSockets to enable real-time search suggestions, providing users with instant feedback as they type their search queries.
 
 
