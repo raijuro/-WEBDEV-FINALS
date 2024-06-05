@@ -1,6 +1,7 @@
 
 
 --------For online set up:-------
+
 go to this link --> https://raijuro.github.io/-WEBDEV-FINALS/
 
 Source Code: https://github.com/raijuro/-WEBDEV-FINALS/
@@ -15,7 +16,7 @@ The WebSocket needs hosting application such as Heroku, Vercel, and Netlify, the
 
 1.)Download and extract the ZIP file from the repository
 
-2.)Open the folder in VS Code -WEBDEV-FINALS-MAIN
+2.)Open the folder in VS Code "-WEBDEV-FINALS-MAIN"
 
 3.)Run a new terminal and run:
 
